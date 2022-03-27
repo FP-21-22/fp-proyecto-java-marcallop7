@@ -6,7 +6,7 @@ import java.util.Objects;
 
 import fp.utiles.Checkers;
 
-public record Vacunacion(LocalDate fecha, String comunidad, Integer pfizer, Integer moderna, Integer astrazeneca, Integer janssen, Integer num_personas) {
+public record Vacunacion(LocalDate fecha, String comunidad, Integer pfizer, Integer moderna, Integer astrazeneca, Integer janssen, Integer num_personas) implements Comparable<Vacunacion> {
 
 	public Vacunacion {
 		
@@ -71,7 +71,7 @@ public record Vacunacion(LocalDate fecha, String comunidad, Integer pfizer, Inte
 	}
 	
 	public static void main(String[] args) {
-		Vacunacion v1 = Vacunacion.parse("04/01/2021;Andalucía;140295;0;0;0;0");
+		Vacunacion v1 = Vacunacion.parse("04/01/2021;AndalucÃ­a;140295;0;0;0;0");
 		System.out.println(v1);
 	}
 }
