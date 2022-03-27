@@ -1,6 +1,5 @@
-# Proyecto del Segundo Cuatrimestre Fundamentos de Programación (Curso  \<2021\>/\<2022\>)
-Autor/a: Marina Calero López   
-uvus: marcallop7@alum.us.es
+# Proyecto del Segundo Cuatrimestre Fundamentos de Programación (Curso  \<XX\>/\<YY\>)
+Autor/a: \<nombre del autor\>   uvus:\<uvus del autor\>
 
 Aquí debes añadir la descripción del dataset y un enunciado del dominio del proyecto.
 
@@ -8,8 +7,8 @@ Aquí debes añadir la descripción del dataset y un enunciado del dominio del p
 ## Estructura de las carpetas del proyecto
 
 * **/src**: Contiene los diferentes archivos que forman parte del proyecto. Debe estar estructurado en los siguentes paquetes
-  * **fp.clinico**: Paquete que contiene los tipos del proyecto.
-  * **fp.farmaceutico.test**: Paquete que contiene las clases de test del proyecto.
+  * **fp.\<dominio\>**: Paquete que contiene los tipos del proyecto.
+  * **fp.\<dominio\>.test**: Paquete que contiene las clases de test del proyecto.
   * **fp.common**: Paquete que contiene los tipos auxiliares del proyecto
   * **fp.utiles**:  Paquete que contiene las clases de utilidad. 
 * **/data**: Contiene el dataset o datasets del proyecto
