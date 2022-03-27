@@ -8,8 +8,8 @@ El proyecto trata sobre los paciente y la vacunación de la pandemia actual, uti
 
 * **/src**: Contiene los diferentes archivos que forman parte del proyecto. Debe estar estructurado en los siguentes paquetes
   * **fp**: Paquete que contiene los tipos del proyecto.
-  * **fp.**: Paquete que contiene las clases de test del proyecto.
-  * **fp.common**: Paquete que contiene los tipos auxiliares del proyecto
+  * **fp.clinico**: Paquete que contiene las clases de test del proyecto.
+  * **fp.farmaceutico**: Paquete que contiene los tipos auxiliares del proyecto
   * **fp.utiles**:  Paquete que contiene las clases de utilidad. 
 * **/data**: Contiene el dataset o datasets del proyecto
     * **\<dataset1.csv\>**: Añade una descripción genérica del dataset.
