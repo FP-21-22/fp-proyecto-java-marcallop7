@@ -4,7 +4,7 @@ import java.util.Objects;
 
 import fp.utiles.Checkers;
 
-public record PacienteEstudio(String id, String genero, Double edad, Boolean hipertension, Boolean enfermedad_corazon, TipoResidencia tipo, Double nivel_medio_glucosa) {
+public record PacienteEstudio(String id, String genero, Double edad, Boolean hipertension, Boolean enfermedad_corazon, TipoResidencia tipo, Double nivel_medio_glucosa) implements Comparable<PacienteEstudio> {
 
 	public PacienteEstudio{
 		
