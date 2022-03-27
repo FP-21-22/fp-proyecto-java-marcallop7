@@ -8,9 +8,11 @@ El proyecto trata sobre los paciente y la vacunación de la pandemia actual, uti
 
 * **/src**: Contiene los diferentes archivos que forman parte del proyecto. Debe estar estructurado en los siguentes paquetes
   * **fp**: Paquete que contiene los tipos del proyecto.
-  * **fp.clinico**: Paquete que contiene las clases de test del proyecto.
-  * **fp.farmaceutico**: Paquete que contiene los tipos auxiliares del proyecto
-  * **fp.utiles**:  Paquete que contiene las clases de utilidad. 
+  * **fp.clinico**: contiene el tipo Persona y sus métodos.
+  * **fp.farmaceutico**: contiene el tipo Paciente y sus métodos
+  * **fp.utiles**:  paquete que contiene las clases de utilidad.
+  * **fp.vacunas**: contiene el tipo Vacunacion y sus métodos.
+  * **fp.test**: contiene las pruebas para el código desarrollado.
 * **/data**: Contiene el dataset o datasets del proyecto
     * **\<dataset1.csv\>**: Añade una descripción genérica del dataset.
     * **\<dataset2.csv\>**: Añade una descripción del resto de datasets que puedas tener.
