@@ -1,7 +1,7 @@
-# Proyecto del Segundo Cuatrimestre Fundamentos de Programación (Curso  \<XX\>/\<YY\>)
-Autor/a: \<nombre del autor\>   uvus:\<uvus del autor\>
+# Proyecto del Segundo Cuatrimestre Fundamentos de Programación (Curso  2021/2022)
+Autor/a: Marina Calero Lopez   uvus: marcallop7
 
-Aquí debes añadir la descripción del dataset y un enunciado del dominio del proyecto.
+El proyecto trata sobre los paciente y la vacunación de la pandemia actual, utilizando datos de interés para implementar distintas funcionalidades.
 
 
 ## Estructura de las carpetas del proyecto
