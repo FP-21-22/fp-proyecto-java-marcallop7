@@ -1,12 +1,41 @@
 package fp.farmaceutico;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
+import java.util.List;
 
 public class FactoriaMedicamentos { 
+	
+    public static List<Medicamento> leeFichero(String fichero){
+        
+        List<Medicamento> res = new ArrayList<Medicamento>();
+        List<String> aux = null;
+        try {
+            aux = Files.readAllLines(Paths.get(fichero));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        int cont = 0;
+        for (String e: aux) {
+            if (cont > 0) {
+                Medicamento m = parseaMedicamento(e);
+                res.add(m);
+            }
+            cont++;
+        }
+        return res;
+    }
 
 	public static Medicamento parseaMedicamento(String linea) {
-		String [] elemento = linea.split(",");
+		String quitarEspacios = linea.trim();
+		String [] elemento = quitarEspacios.split(";");
+		if (elemento.length != 7) {
+			throw new IllegalArgumentException("La cadena deva de estar formada por 7 elementos.");
+		}
 		String nombre_medicamento = elemento[0].trim();
 		TipoMedicamento tipo = TipoMedicamento.valueOf(elemento[1].trim().toUpperCase());
 		String codigo_enfermedad = elemento[2].trim();

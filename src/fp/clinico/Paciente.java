@@ -9,11 +9,11 @@ import fp.utiles.Checkers;
 
 public record Paciente(Persona persona, String codigo_ingreso, LocalDateTime fecha_hora_ingreso) {
 
-	private String formatear_fecha(LocalDateTime f) {
+	public String formatear_fecha(LocalDateTime f) {
 		return f.format(DateTimeFormatter.ofPattern("dd/MM/yy"));
 	}
 	
-	private String formatear_hora(LocalDateTime f) {
+	public String formatear_hora(LocalDateTime f) {
 		return f.format(DateTimeFormatter.ofPattern("hh:MM"));
 	}
 	

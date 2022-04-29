@@ -6,11 +6,11 @@ import java.util.Objects;
 
 import fp.utiles.Checkers;
 
-public record Vacunacion(LocalDate fecha, String comunidad, Integer pfizer, Integer moderna, Integer astrazeneca, Integer janssen, Integer num_personas) {
+public record Vacunacion(LocalDate fecha, String comunidad, Integer pfizer, Integer moderna, Integer astrazeneca, Integer janssen, Integer num_personas) implements Comparable<Vacunacion> {
 
 	public Vacunacion {
 		
-		Checkers.check("La fecha no puede ser posterior al 01/02/2021", fecha.isBefore(LocalDate.of(2021, 2, 1)));
+		Checkers.check("La fecha no puede ser anterior al 01/02/2021", fecha.isAfter(LocalDate.of(2021, 1, 1)));
 	}
 	
 	public Integer sum_total(Integer pfizer, Integer moderna, Integer astrazeneca, Integer janssen) {
@@ -69,6 +69,7 @@ public record Vacunacion(LocalDate fecha, String comunidad, Integer pfizer, Inte
 		}
 		return o;
 	}
+	
 	
 	public static void main(String[] args) {
 		Vacunacion v1 = Vacunacion.parse("04/01/2021;Andalucía;140295;0;0;0;0");

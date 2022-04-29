@@ -4,7 +4,7 @@ import java.util.Objects;
 
 import fp.utiles.Checkers;
 
-public record PacienteEstudio(String id, String genero, Double edad, Boolean hipertension, Boolean enfermedad_corazon, TipoResidencia tipo, Double nivel_medio_glucosa) {
+public record PacienteEstudio(String id, String genero, Double edad, Boolean hipertension, Boolean enfermedad_corazon, TipoResidencia tipo, Double nivel_medio_glucosa) implements Comparable<PacienteEstudio> {
 
 	public PacienteEstudio{
 		
@@ -12,7 +12,7 @@ public record PacienteEstudio(String id, String genero, Double edad, Boolean hip
 		Checkers.check("El nivel medio de glucosa tiene que ser mayor o igual que 0", nivel_medio_glucosa>=0);
 	}
 	
-	private Boolean factor_riesgo() {
+	public Boolean factor_riesgo() {
 		if (hipertension == true && edad > 40) {
 			return true;
 		} else {
@@ -28,7 +28,11 @@ public record PacienteEstudio(String id, String genero, Double edad, Boolean hip
 	}
 	
 	public static PacienteEstudio parse(String linea) {
-		String [] elemento = linea.split(";");
+    	String quitarEspacios = linea.trim();
+		String [] elemento = quitarEspacios.split(";");
+		if (elemento.length != 7) {
+			throw new IllegalArgumentException("La cadena deva de estar formada `pr 7 elementos.");
+		}
 		String id = elemento[0].trim();
 		String genero = elemento[1].trim();
 		Double edad = Double.valueOf(elemento[2].trim());

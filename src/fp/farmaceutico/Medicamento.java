@@ -96,9 +96,13 @@ public class Medicamento implements Comparable<Medicamento>{
 		}
 	}
 
+
+
 	@Override
 	public String toString() {
-		return "Medicamento [nombre_medicamento=" + nombre_medicamento + ", farmaceutica=" + farmaceutica + "]";
+		return "Medicamento [nombre_medicamento=" + nombre_medicamento + ", tipo=" + tipo + ", codigo_enfermedad="
+				+ codigo_enfermedad + ", farmaceutica=" + farmaceutica + ", puntuacion=" + puntuacion
+				+ ", indice_sintomatico=" + indice_sintomatico + ", fecha_catalogo=" + fecha_catalogo + "]";
 	}
 
 	@Override
